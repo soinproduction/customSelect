@@ -251,3 +251,5 @@ class CustomSelect {
         return Array.from(this.selectedValues);
     }
 }
+
+export default CustomSelect;

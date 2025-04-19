@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Select Component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Custom Select</h1>
+      <p>Гибкий, настраиваемый компонент раскрывающегося списка с режимами выбора одного и нескольких элементов.</p>
+    </header>
+
+      <div class="demo-section">
+          <h2>Default Select</h2>
+          <div id="default-select" class="custom-select-container">
+              <div class="custom-select">
+                  <div class="select-field">
+                      <div class="selected-options">
+                          <span class="placeholder">Choose a color</span>
+                      </div>
+                      <div class="arrow-down">
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </div>
+                  </div>
+                  <ul class="options-container">
+                      <li class="option" data-value="red">
+                          <i class="sprite color-swatch red"></i>
+                          <span class="option-text">Red</span>
+                      </li>
+                      <li class="option" data-value="green">
+                          <i class="sprite color-swatch green"></i>
+                          <span class="option-text">Green</span>
+                      </li>
+                      <li class="option" data-value="blue">
+                          <i class="sprite color-swatch blue"></i>
+                          <span class="option-text">Blue</span>
+                      </li>
+                      <li class="option" data-value="yellow">
+                          <i class="sprite color-swatch yellow"></i>
+                          <span class="option-text">Yellow</span>
+                      </li>
+                      <li class="option" data-value="purple">
+                          <i class="sprite color-swatch purple"></i>
+                          <span class="option-text">Purple</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div class="demo-section">
+          <h2>Single Select Mode with Delete Button</h2>
+          <div id="single-select" class="custom-select-container">
+              <div class="custom-select">
+                  <div class="select-field">
+                      <div class="selected-options">
+                          <span class="placeholder">Choose a color</span>
+                      </div>
+                      <div class="arrow-down">
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </div>
+                  </div>
+                  <ul class="options-container">
+                      <li class="option" data-value="red">
+                          <i class="sprite color-swatch red"></i>
+                          <span class="option-text">Red</span>
+                      </li>
+                      <li class="option" data-value="green">
+                          <i class="sprite color-swatch green"></i>
+                          <span class="option-text">Green</span>
+                      </li>
+                      <li class="option" data-value="blue">
+                          <i class="sprite color-swatch blue"></i>
+                          <span class="option-text">Blue</span>
+                      </li>
+                      <li class="option" data-value="yellow">
+                          <i class="sprite color-swatch yellow"></i>
+                          <span class="option-text">Yellow</span>
+                      </li>
+                      <li class="option" data-value="purple">
+                          <i class="sprite color-swatch purple"></i>
+                          <span class="option-text">Purple</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="selected-values"></div>
+          </div>
+          <button id="single-get-values" class="button">Get Selected Value</button>
+          <div id="single-result" class="result">
+              <p>Selected value will appear here</p>
+          </div>
+      </div>
+
+    <div class="demo-section">
+      <h2>Multiple Selection Mode</h2>
+      <div id="multiple-select" class="custom-select-container">
+        <div class="custom-select">
+          <div class="select-field">
+            <div class="selected-options">
+              <span class="placeholder">Choose multiple colors</span>
+            </div>
+            <div class="arrow-down">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="options-container">
+            <li class="option" data-value="red">
+              <i class="sprite color-swatch red"></i>
+              <span class="option-text">Red</span>
+            </li>
+            <li class="option" data-value="green">
+              <i class="sprite color-swatch green"></i>
+              <span class="option-text">Green</span>
+            </li>
+            <li class="option" data-value="blue">
+              <i class="sprite color-swatch blue"></i>
+              <span class="option-text">Blue</span>
+            </li>
+            <li class="option" data-value="yellow">
+              <i class="sprite color-swatch yellow"></i>
+              <span class="option-text">Yellow</span>
+            </li>
+            <li class="option disabled" data-value="orange">
+              <i class="sprite color-swatch orange"></i>
+              <span class="option-text">Orange (Disabled)</span>
+            </li>
+            <li class="option" data-value="purple">
+              <i class="sprite color-swatch purple"></i>
+              <span class="option-text">Purple</span>
+            </li>
+          </ul>
+        </div>
+        <div class="selected-values"></div>
+      </div>
+      <button id="multiple-get-values" class="button">Get Selected Values</button>
+      <div id="multiple-result" class="result">
+        <p>Selected values will appear here</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="custom-select/custom-select.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
